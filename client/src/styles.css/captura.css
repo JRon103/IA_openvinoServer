@@ -12,9 +12,9 @@
 }
 
 .upload-file, .view {
-  margin: 100px 30px 30px 30px;
+  margin: 30px;
   width: calc(50% - 200px);
-  height: calc(100vh - 200px);
+  height: calc(100vh - 180px);
   background-color: #D1D3DB;
   border: #081F20 2px dashed;
   border-radius: 10px;
@@ -22,9 +22,44 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
 .input-file {
-  margin: 20px;
+  margin-bottom: 50px;
+  max-width: 90%;
+}
+
+.upload-file .text-file, .view .text-file {
+  margin: 20px 0;
+}
+
+.text-file {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.response {
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .area-form form {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .upload-file, .view {
+    width: 90%;
+    height: 600px;
+    background-color: #D1D3DB;
+    border: #081F20 2px dashed;
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

@@ -51,18 +51,30 @@ function Captura() {
     <div className='area-form'>
       <form onSubmit={handleSubmit}>
         <div className='upload-file'>
-          <input type="file" onChange={handleFileChange} className='input-file' />
+          <div className='text-file'>Agregar Imagen</div>
+          <input type="file" onChange={handleFileChange} className='input-file' accept="image/*" />
           {imagePreview && (
-            <div>
-              <img src={imagePreview} alt="Vista previa" style={{ width: '300px', height: 'auto' }} />
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <img 
+                src={imagePreview} 
+                alt="Vista previa" 
+                style={{ 
+                  width: '90%', 
+                  height: 'auto',
+                  maxHeight: '400px' }} />
             </div>
           )}
         </div>
         <div className='view'>
+          <div className='text-file'>Subir Imagen</div>
           <button type="submit">Upload</button>
+          <div className='response'>{uploadStatus}</div>
         </div>
       </form>
-      {/* <div>{uploadStatus}</div> */}
     </div>
   );
 }
