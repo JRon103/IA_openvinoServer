@@ -5,7 +5,10 @@ function Navbar () {
   return (
     <div>
       <div className="navbar">
-        <div className="logo_img"></div>
+        <div className="image-logo"></div>
+        <div className="name">
+          LIMITLESS
+        </div>
       </div>
     </div>
   )
