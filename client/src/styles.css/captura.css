@@ -1,0 +1,30 @@
+.area-form {
+  background-color: #F7F9F9;
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+
+.area-form form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-file, .view {
+  margin: 100px 30px 30px 30px;
+  width: calc(50% - 200px);
+  height: calc(100vh - 200px);
+  background-color: #D1D3DB;
+  border: #081F20 2px dashed;
+  border-radius: 10px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-file {
+  margin: 20px;
+}
