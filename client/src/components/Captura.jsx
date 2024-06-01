@@ -6,6 +6,7 @@ function Captura() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState('');
   const [imagePreview, setImagePreview] = useState(null);
+  const [apiResponse, setApiResponse] = useState(null);
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -38,6 +39,8 @@ function Captura() {
       });
 
       if (response.ok) {
+        const data = await response.json();
+        setApiResponse(data);
         setUploadStatus(response.resultados);
       } else {
         setUploadStatus(`File upload failed 1: ${response.statusText}`);
@@ -73,6 +76,12 @@ function Captura() {
           <div className='text-file'>Subir Imagen</div>
           <button type="submit">Upload</button>
           <div className='response'>{uploadStatus}</div>
+          {apiResponse && (
+            <div className='api-response'>
+              <h3>Resultados de la API:</h3>
+              <pre>{JSON.stringify(apiResponse, null, 2)}</pre>
+            </div>
+          )}
         </div>
       </form>
     </div>
