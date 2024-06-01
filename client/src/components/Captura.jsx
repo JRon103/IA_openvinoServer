@@ -78,7 +78,7 @@ function Captura() {
           <div className='response'>{uploadStatus}</div>
           {apiResponse && (
             <div className='api-response'>
-              <h3>Resultados de la API:</h3>
+              <div className='text-file'>Resultados:</div>
               <pre>{JSON.stringify(apiResponse, null, 2)}</pre>
             </div>
           )}
