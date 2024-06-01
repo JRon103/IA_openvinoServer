@@ -38,7 +38,7 @@ function Captura() {
       });
 
       if (response.ok) {
-        setUploadStatus('File uploaded successfully!');
+        setUploadStatus(response.resultados);
       } else {
         setUploadStatus(`File upload failed 1: ${response.statusText}`);
       }
