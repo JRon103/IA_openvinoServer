@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
+
 import os
 
 
@@ -19,6 +21,7 @@ import requests
 
 
 app = Flask(__name__)
+CORS(app)
 UPLOAD_FOLDER = 'C:/Users/villa/IA/uploads/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -574,7 +577,7 @@ def openvino():
 
     if cv2.imwrite(f"{DATA_DIR}/detection_results.jpg", roi_stack):
         print('The detection result image has been saved as "detection_results.jpg" in data')
-        plt.imshow(cv2.cvtColor(roi_stack, cv2.COLOR_BGR2RGB))
+        #plt.imshow(cv2.cvtColor(roi_stack, cv2.COLOR_BGR2RGB))
     print("datadir: "+DATA_DIR)
 
     # ### Run meter segmentation model
