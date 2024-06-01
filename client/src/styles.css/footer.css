@@ -1,0 +1,26 @@
+.footer {
+    height: 200px;
+    width: 100%;
+    background-color: #0d1111;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #D1D3DB;
+}
+
+.logo-tecnolag {
+    background-image: url(../assets/tecnolag_largo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    height: 100px;
+    width: 300px;
+}
